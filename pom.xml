@@ -1,0 +1,134 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>cn.xh</groupId>
+  <artifactId>meilishuo</artifactId>
+  <packaging>war</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>meilishuo Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <!-- 父依赖 -->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.5.6.RELEASE</version>
+  </parent>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <poi.version>3.10-beta2</poi.version>
+  </properties>
+
+  <dependencies>
+    <!-- web项目必须配置 -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <!-- mybatis -->
+    <dependency>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter</artifactId>
+      <version>1.1.1</version>
+    </dependency>
+    <!-- mysql数据库 -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/javax.persistence/persistence-api -->
+    <dependency>
+      <groupId>javax.persistence</groupId>
+      <artifactId>persistence-api</artifactId>
+      <version>1.0.2</version>
+    </dependency>
+
+    <!-- junit： 可以根据具体情况删减 -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- 加入POI核心依赖 -->
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>${poi.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>${poi.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-scratchpad</artifactId>
+      <version>${poi.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sourceforge.jexcelapi</groupId>
+      <artifactId>jxl</artifactId>
+      <version>2.6.12</version>
+    </dependency>
+      <!-- 引入solr包 -->
+      <dependency>
+          <groupId>org.apache.solr</groupId>
+          <artifactId>solr-solrj</artifactId>
+          <version>4.10.4</version>
+      </dependency>
+      <!-- json-lib -->
+      <dependency>
+          <groupId>net.sf.json-lib</groupId>
+          <artifactId>json-lib</artifactId>
+          <version>2.4</version>
+          <classifier>jdk15</classifier>
+      </dependency>
+      <!--引入fastjson对应的jar包 -->
+      <dependency>
+          <groupId>com.alibaba</groupId>
+          <artifactId>fastjson</artifactId>
+          <version>1.2.23</version>
+      </dependency>
+      <!--spring热部署-->
+      <!--<dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-devtools</artifactId>
+      </dependency>-->
+      <!--http://blog.csdn.net/zemochen/article/details/53327518-->
+      <dependency>
+          <groupId>org.springframework</groupId>
+          <artifactId>springloaded</artifactId>
+          <version>1.2.6.RELEASE</version>
+      </dependency>
+  </dependencies>
+
+  <build>
+      <!--<plugins>
+          -javaagent:D:/Code/maven/rep/springloader/springloaded-1.2.5.RELEASE.jar  -noverify
+      </plugins>-->
+      <plugins>
+          <plugin>
+              <groupId>org.springframework.boot</groupId>
+              <artifactId>spring-boot-maven-plugin </artifactId>
+              <dependencies>
+                  <!--spring热部署-->
+                  <dependency>
+                      <groupId>org.springframework</groupId>
+                      <artifactId>springloaded</artifactId>
+                      <version>1.2.6.RELEASE</version>
+                  </dependency>
+              </dependencies>
+              <executions>
+                  <execution>
+                      <goals>
+                          <goal>repackage</goal>
+                      </goals>
+                      <configuration>
+                          <classifier>exec</classifier>
+                      </configuration>
+                  </execution>
+              </executions>
+          </plugin>
+      </plugins>
+    <finalName>meilishuo</finalName>
+  </build>
+</project>
