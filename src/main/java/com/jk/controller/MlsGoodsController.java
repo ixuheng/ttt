@@ -41,12 +41,18 @@ public class MlsGoodsController extends BaseController{
 		result=callback+"("+result+")";
 		super.outString(result, response);
 	}*/
+
+
+	public static void main(String[] args) {
+	}
 	/**
 	 * 查询所有
 	 */
 	@RequestMapping("/queryAll")
 	public void queryall(HttpServletRequest request, String callback, HttpServletResponse response){
 		List<MlsGoods> list=null;
+
+
 		try {
 			list = mlsGoodsService.queryAll();
 		} catch (Exception e) {
