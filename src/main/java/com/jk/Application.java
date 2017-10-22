@@ -11,6 +11,7 @@ public class Application {
 	//545454
 	//3434
 	//qqqqqqqqq
+	//练习练习
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
