@@ -102,7 +102,9 @@ public class MlsGoodsController extends BaseController{
 	 * 修改备注： 
 	 * @param asd
 	 * @param request
+	 *
 	 * @param response
+	 * 我今天的任务
 	 * @return</pre>    
 	 */
 	@RequestMapping("/sendAllGood")
