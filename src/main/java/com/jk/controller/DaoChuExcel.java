@@ -99,7 +99,7 @@ public class DaoChuExcel<T>{
         createNewSheet();
 	}
 	public void initexcel() throws BiffException, IOException, ExcelException {
-		//ssssssssssss
+		//sssssssssssshhhhhhhhhhhh
 		//根据Excel数据源创建WorkBook
         Workbook wb=Workbook.getWorkbook(in);
         //获取所有工作表
