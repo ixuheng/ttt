@@ -106,6 +106,7 @@ public class MlsGoodsController extends BaseController{
 	 * @param response
 	 * 我今天的任务
      * diERTF
+	 * FDSAGDF
 	 * @return</pre>    
 	 */
 	@RequestMapping("/sendAllGood")
