@@ -12,6 +12,7 @@ public class Application {
 	//sdsadasdddddd
 	//sdadasdasdad
 	//8787857855495494
+	//今天是礼拜五
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
