@@ -22,6 +22,7 @@ import com.jk.model.Json;
 
 
 public class BaseController {
+	//123456
 	
 	 public Json uploadify(MultipartFile fileName,String folderPath ,HttpServletRequest request, HttpServletResponse response) throws Exception{
 	        ServletContext sc = request.getSession().getServletContext();
